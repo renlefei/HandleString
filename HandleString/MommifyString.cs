@@ -2,9 +2,9 @@
 {
     public static class MommifyString
     {
-        public static string mommify(string word)
+        public static string Mommify(string word)
         {
-            return "h";
+            return word;
         }
     }
 }
