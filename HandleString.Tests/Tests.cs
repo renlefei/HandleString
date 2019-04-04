@@ -1,5 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
+using HandleString;
 
 namespace HandleString.Tests
 {
@@ -7,9 +8,17 @@ namespace HandleString.Tests
     public class Tests
     {
         [Test]
-        public void Test1()
+        public void Should_Return_h_When_Given_h()
         {
-            Assert.True(true);
+            //Arrange
+            var expected = "h";
+            
+            //Act
+            var actual = MommifyString.mommify("h");
+            
+            //Assert
+            Assert.AreEqual(expected, actual);
+            
         }
 
 
