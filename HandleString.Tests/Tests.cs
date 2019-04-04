@@ -17,8 +17,7 @@ namespace HandleString.Tests
             var actual = MommifyString.mommify("h");
             
             //Assert
-            Assert.AreEqual(expected, actual);
-            
+            Assert.AreEqual(expected, actual);        
         }
 
 
