@@ -32,5 +32,21 @@ namespace HandleString.Tests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        public void Should_Return_mommy_When_Given_vowel()
+        {
+            //Arrange
+            var expected = "mommy";
+
+            foreach (var vowel in "aeiou")
+            {
+                //Act
+                var actual = MommifyString.Mommify(vowel.ToString());
+                
+                //Assert
+                Assert.AreEqual(expected,actual);
+            }
+        }
     }
 }
