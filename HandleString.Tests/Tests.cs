@@ -48,5 +48,18 @@ namespace HandleString.Tests
                 Assert.AreEqual(expected,actual);
             }
         }
+
+        [Test]
+        public void Should_Mommify_When_Vowels_Greater_Than_30_Percentage()
+        {
+            //Arrange
+            var expected = "shmommy";
+            
+            //Act
+            var actual = MommifyString.Mommify("she");
+            
+            //Assert
+            Assert.AreEqual(expected,actual);
+        }
     }
 }
