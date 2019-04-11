@@ -19,20 +19,5 @@ namespace HandleString.Tests
             //Assert
             Assert.AreEqual(expected, actual);        
         }
-
-        [Test]
-        public void Should_Return_m_When_Given_m()
-        {
-            //Arrange
-            var expected = "m";
-            
-            //Act
-            var actual = MommifyString.Mommify("m");
-            
-            //Assert
-            Assert.AreEqual(expected, actual);
-        }
-
-
     }
 }
