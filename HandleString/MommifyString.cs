@@ -4,7 +4,7 @@
     {
         public static string Mommify(string word)
         {
-            if (word == "a" || word =="e" || word =="i" || word =="o" || word=="u")
+            if ("aeiou".IndexOf(word[0]) >= 0)
                 return "mommy";
             return word;
         }
