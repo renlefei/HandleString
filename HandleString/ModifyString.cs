@@ -8,13 +8,19 @@ namespace HandleString
     {
         private const string VowelString = "aeiou";
         public static string Modify(string word)
-        {
-            var count = CountVowels(word);
-
-            var result = (count * 1.0) / word.Length >= 0.30 ? Replace(word) : word;
+        {           
+            var result = ShouldBeModify(word)? Replace(word) : word;
 
             return result;
         }
+
+        private static bool ShouldBeModify(string word)
+        {
+            var count = CountVowels(word);
+
+            return (count * 1.0) / word.Length >= 0.30;
+        }
+
 
         private static string Replace(string word)
         {
