@@ -48,8 +48,7 @@ namespace HandleString
 
         private static int CountVowels(string word)
         {
-            var countVowels = word.Count(t => BeVowel(t) == true);
-            return countVowels;
+            return word.Count(t => BeVowel(t) == true);          
         }
     }
 }
