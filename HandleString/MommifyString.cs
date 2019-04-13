@@ -19,7 +19,7 @@ namespace HandleString
             }
             else
             {
-                return word;
+                result = word;
             }
 
             return result;
@@ -27,16 +27,17 @@ namespace HandleString
 
         private static string Replace(string word)
         {
-            string result = String.Empty;
-            foreach (var t in word)
+            var result = string.Empty;
+            
+            foreach (var letter in word)
             {
-                if (VowelString.IndexOf(t) >= 0)
+                if (VowelString.IndexOf(letter) >= 0)
                 {
                     result += "mommy";
                 }
                 else
                 {
-                    result += t;
+                    result += letter;
                 }
             }
 
