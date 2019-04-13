@@ -26,15 +26,18 @@ namespace HandleString
         {
             var result = string.Empty;
             
-            foreach (var letter in word)
+            for (var i =0; i< word.Length; i++)
             {
-                if (BeVowel(letter))
+                if (BeVowel(word[i]))
                 {
-                    result += "mommy";
+                    if(i == 0 || !BeVowel(word[i-1]))
+                    {
+                        result += "mommy";
+                    }
                 }
                 else
                 {
-                    result += letter;
+                    result += word[i];
                 }
             }
 

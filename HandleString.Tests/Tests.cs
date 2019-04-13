@@ -62,5 +62,18 @@ namespace HandleString.Tests
             //Assert
             Assert.AreEqual(expected,actual);
         }
+
+        [Test]
+        public void Should_Not_Modify_When_There_are_Vowels_Sequences()
+        {
+            //Arrange
+            const string expected = "hmommyr";
+            
+            //Act
+            var actual = ModifyString.Modify("hear");
+            
+            //Assert
+            Assert.AreEqual(expected,actual);
+        }
     }
 }
