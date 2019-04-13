@@ -4,23 +4,14 @@ using System.Linq;
 
 namespace HandleString
 {
-    public static class MommifyString
+    public static class ModifyString
     {
-        public const string VowelString = "aeiou";
-        public static string Mommify(string word)
+        private const string VowelString = "aeiou";
+        public static string Modify(string word)
         {
             var count = CountVowels(word);
 
-            var result = string.Empty;
-
-            if ((count * 1.0) / word.Length >= 0.30)
-            {
-                result = Replace(word);
-            }
-            else
-            {
-                result = word;
-            }
+            var result = (count * 1.0) / word.Length >= 0.30 ? Replace(word) : word;
 
             return result;
         }
@@ -31,7 +22,7 @@ namespace HandleString
             
             foreach (var letter in word)
             {
-                if (VowelString.IndexOf(letter) >= 0)
+                if (BeVowel(letter))
                 {
                     result += "mommy";
                 }
@@ -44,9 +35,14 @@ namespace HandleString
             return result;
         }
 
+        private static bool BeVowel(char letter)
+        {
+            return VowelString.IndexOf(letter) >= 0;
+        }
+
         private static int CountVowels(string word)
         {
-            var countVowels = word.Count(t => VowelString.IndexOf(t) >= 0);
+            var countVowels = word.Count(t => BeVowel(t) == true);
             return countVowels;
         }
     }

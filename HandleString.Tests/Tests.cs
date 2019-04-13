@@ -11,10 +11,10 @@ namespace HandleString.Tests
         public void Should_Return_h_When_Given_h()
         {
             //Arrange
-            var expected = "h";
+            const string expected = "h";
             
             //Act
-            var actual = MommifyString.Mommify("h");
+            var actual = ModifyString.Modify("h");
             
             //Assert
             Assert.AreEqual(expected, actual);        
@@ -24,10 +24,10 @@ namespace HandleString.Tests
         public void Should_Return_mommy_When_Given_a()
         {
             //Arrange
-            var expected = "mommy";
+            const string expected = "mommy";
             
             //Act
-            var actual = MommifyString.Mommify("a");
+            var actual = ModifyString.Modify("a");
             
             //Assert
             Assert.AreEqual(expected, actual);
@@ -37,12 +37,12 @@ namespace HandleString.Tests
         public void Should_Return_mommy_When_Given_vowel()
         {
             //Arrange
-            var expected = "mommy";
+            const string expected = "mommy";
 
             foreach (var vowel in "aeiou")
             {
                 //Act
-                var actual = MommifyString.Mommify(vowel.ToString());
+                var actual = ModifyString.Modify(vowel.ToString());
                 
                 //Assert
                 Assert.AreEqual(expected,actual);
@@ -50,13 +50,13 @@ namespace HandleString.Tests
         }
 
         [Test]
-        public void Should_Mommify_When_Vowels_Greater_Than_30_Percentage()
+        public void Should_Modify_When_Vowels_Greater_Than_30_Percentage()
         {
             //Arrange
-            var expected = "shmommy";
+            const string expected = "shmommy";
             
             //Act
-            var actual = MommifyString.Mommify("she");
+            var actual = ModifyString.Modify("she");
             
             //Assert
             Assert.AreEqual(expected,actual);
