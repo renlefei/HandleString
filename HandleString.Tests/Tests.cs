@@ -7,6 +7,7 @@ namespace HandleString.Tests
     [TestFixture]
     public class Tests
     {
+        private const string VowelString = "aeiou";
         [Test]
         public void Should_Return_h_When_Given_h()
         {
@@ -39,7 +40,7 @@ namespace HandleString.Tests
             //Arrange
             const string expected = "mommy";
 
-            foreach (var vowel in "aeiou")
+            foreach (var vowel in VowelString)
             {
                 //Act
                 var actual = ModifyString.Modify(vowel.ToString());
